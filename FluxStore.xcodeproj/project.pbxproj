@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		424F45D82A99328800FA7376 /* FluxStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424F45D72A99328800FA7376 /* FluxStoreApp.swift */; };
+		424F45DA2A99328800FA7376 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424F45D92A99328800FA7376 /* ContentView.swift */; };
+		424F45DC2A99328900FA7376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 424F45DB2A99328900FA7376 /* Assets.xcassets */; };
+		424F45DF2A99328900FA7376 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 424F45DE2A99328900FA7376 /* Preview Assets.xcassets */; };
+		424F45E92A99328900FA7376 /* FluxStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424F45E82A99328900FA7376 /* FluxStoreTests.swift */; };
+		424F45F32A99328900FA7376 /* FluxStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424F45F22A99328900FA7376 /* FluxStoreUITests.swift */; };
+		424F45F52A99328900FA7376 /* FluxStoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424F45F42A99328900FA7376 /* FluxStoreUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		424F45E52A99328900FA7376 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 424F45CC2A99328800FA7376 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 424F45D32A99328800FA7376;
+			remoteInfo = FluxStore;
+		};
+		424F45EF2A99328900FA7376 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 424F45CC2A99328800FA7376 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 424F45D32A99328800FA7376;
+			remoteInfo = FluxStore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		424F45D42A99328800FA7376 /* FluxStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FluxStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		424F45D72A99328800FA7376 /* FluxStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluxStoreApp.swift; sourceTree = "<group>"; };
+		424F45D92A99328800FA7376 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		424F45DB2A99328900FA7376 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		424F45DE2A99328900FA7376 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		424F45E42A99328900FA7376 /* FluxStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FluxStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		424F45E82A99328900FA7376 /* FluxStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluxStoreTests.swift; sourceTree = "<group>"; };
+		424F45EE2A99328900FA7376 /* FluxStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FluxStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		424F45F22A99328900FA7376 /* FluxStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluxStoreUITests.swift; sourceTree = "<group>"; };
+		424F45F42A99328900FA7376 /* FluxStoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluxStoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		424F45D12A99328800FA7376 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		424F45E12A99328900FA7376 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		424F45EB2A99328900FA7376 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		424F45CB2A99328800FA7376 = {
+			isa = PBXGroup;
+			children = (
+				424F45D62A99328800FA7376 /* FluxStore */,
+				424F45E72A99328900FA7376 /* FluxStoreTests */,
+				424F45F12A99328900FA7376 /* FluxStoreUITests */,
+				424F45D52A99328800FA7376 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		424F45D52A99328800FA7376 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				424F45D42A99328800FA7376 /* FluxStore.app */,
+				424F45E42A99328900FA7376 /* FluxStoreTests.xctest */,
+				424F45EE2A99328900FA7376 /* FluxStoreUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		424F45D62A99328800FA7376 /* FluxStore */ = {
+			isa = PBXGroup;
+			children = (
+				424F45D72A99328800FA7376 /* FluxStoreApp.swift */,
+				424F45D92A99328800FA7376 /* ContentView.swift */,
+				424F45DB2A99328900FA7376 /* Assets.xcassets */,
+				424F45DD2A99328900FA7376 /* Preview Content */,
+			);
+			path = FluxStore;
+			sourceTree = "<group>";
+		};
+		424F45DD2A99328900FA7376 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				424F45DE2A99328900FA7376 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		424F45E72A99328900FA7376 /* FluxStoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				424F45E82A99328900FA7376 /* FluxStoreTests.swift */,
+			);
+			path = FluxStoreTests;
+			sourceTree = "<group>";
+		};
+		424F45F12A99328900FA7376 /* FluxStoreUITests */ = {
+			isa = PBXGroup;
+			children = (
+				424F45F22A99328900FA7376 /* FluxStoreUITests.swift */,
+				424F45F42A99328900FA7376 /* FluxStoreUITestsLaunchTests.swift */,
+			);
+			path = FluxStoreUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		424F45D32A99328800FA7376 /* FluxStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 424F45F82A99328900FA7376 /* Build configuration list for PBXNativeTarget "FluxStore" */;
+			buildPhases = (
+				424F45D02A99328800FA7376 /* Sources */,
+				424F45D12A99328800FA7376 /* Frameworks */,
+				424F45D22A99328800FA7376 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FluxStore;
+			productName = FluxStore;
+			productReference = 424F45D42A99328800FA7376 /* FluxStore.app */;
+			productType = "com.apple.product-type.application";
+		};
+		424F45E32A99328900FA7376 /* FluxStoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 424F45FB2A99328900FA7376 /* Build configuration list for PBXNativeTarget "FluxStoreTests" */;
+			buildPhases = (
+				424F45E02A99328900FA7376 /* Sources */,
+				424F45E12A99328900FA7376 /* Frameworks */,
+				424F45E22A99328900FA7376 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				424F45E62A99328900FA7376 /* PBXTargetDependency */,
+			);
+			name = FluxStoreTests;
+			productName = FluxStoreTests;
+			productReference = 424F45E42A99328900FA7376 /* FluxStoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		424F45ED2A99328900FA7376 /* FluxStoreUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 424F45FE2A99328900FA7376 /* Build configuration list for PBXNativeTarget "FluxStoreUITests" */;
+			buildPhases = (
+				424F45EA2A99328900FA7376 /* Sources */,
+				424F45EB2A99328900FA7376 /* Frameworks */,
+				424F45EC2A99328900FA7376 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				424F45F02A99328900FA7376 /* PBXTargetDependency */,
+			);
+			name = FluxStoreUITests;
+			productName = FluxStoreUITests;
+			productReference = 424F45EE2A99328900FA7376 /* FluxStoreUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		424F45CC2A99328800FA7376 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					424F45D32A99328800FA7376 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					424F45E32A99328900FA7376 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 424F45D32A99328800FA7376;
+					};
+					424F45ED2A99328900FA7376 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 424F45D32A99328800FA7376;
+					};
+				};
+			};
+			buildConfigurationList = 424F45CF2A99328800FA7376 /* Build configuration list for PBXProject "FluxStore" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 424F45CB2A99328800FA7376;
+			productRefGroup = 424F45D52A99328800FA7376 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				424F45D32A99328800FA7376 /* FluxStore */,
+				424F45E32A99328900FA7376 /* FluxStoreTests */,
+				424F45ED2A99328900FA7376 /* FluxStoreUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		424F45D22A99328800FA7376 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				424F45DF2A99328900FA7376 /* Preview Assets.xcassets in Resources */,
+				424F45DC2A99328900FA7376 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		424F45E22A99328900FA7376 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		424F45EC2A99328900FA7376 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		424F45D02A99328800FA7376 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				424F45DA2A99328800FA7376 /* ContentView.swift in Sources */,
+				424F45D82A99328800FA7376 /* FluxStoreApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		424F45E02A99328900FA7376 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				424F45E92A99328900FA7376 /* FluxStoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		424F45EA2A99328900FA7376 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				424F45F32A99328900FA7376 /* FluxStoreUITests.swift in Sources */,
+				424F45F52A99328900FA7376 /* FluxStoreUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		424F45E62A99328900FA7376 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 424F45D32A99328800FA7376 /* FluxStore */;
+			targetProxy = 424F45E52A99328900FA7376 /* PBXContainerItemProxy */;
+		};
+		424F45F02A99328900FA7376 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 424F45D32A99328800FA7376 /* FluxStore */;
+			targetProxy = 424F45EF2A99328900FA7376 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		424F45F62A99328900FA7376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		424F45F72A99328900FA7376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		424F45F92A99328900FA7376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FluxStore/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fluxstore.FluxStore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		424F45FA2A99328900FA7376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FluxStore/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fluxstore.FluxStore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		424F45FC2A99328900FA7376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fluxstore.FluxStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FluxStore.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FluxStore";
+			};
+			name = Debug;
+		};
+		424F45FD2A99328900FA7376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fluxstore.FluxStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FluxStore.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FluxStore";
+			};
+			name = Release;
+		};
+		424F45FF2A99328900FA7376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fluxstore.FluxStoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FluxStore;
+			};
+			name = Debug;
+		};
+		424F46002A99328900FA7376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fluxstore.FluxStoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FluxStore;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		424F45CF2A99328800FA7376 /* Build configuration list for PBXProject "FluxStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				424F45F62A99328900FA7376 /* Debug */,
+				424F45F72A99328900FA7376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		424F45F82A99328900FA7376 /* Build configuration list for PBXNativeTarget "FluxStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				424F45F92A99328900FA7376 /* Debug */,
+				424F45FA2A99328900FA7376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		424F45FB2A99328900FA7376 /* Build configuration list for PBXNativeTarget "FluxStoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				424F45FC2A99328900FA7376 /* Debug */,
+				424F45FD2A99328900FA7376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		424F45FE2A99328900FA7376 /* Build configuration list for PBXNativeTarget "FluxStoreUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				424F45FF2A99328900FA7376 /* Debug */,
+				424F46002A99328900FA7376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 424F45CC2A99328800FA7376 /* Project object */;
+}
