@@ -7,13 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420404A42A9D1FB2004DE201 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420404A32A9D1FB2004DE201 /* PrimaryButton.swift */; };
+		420404A62A9D2284004DE201 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420404A52A9D2284004DE201 /* Icons.swift */; };
+		420404A82A9D25AE004DE201 /* CenterModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420404A72A9D25AD004DE201 /* CenterModifier.swift */; };
+		420404AA2A9D3010004DE201 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420404A92A9D3010004DE201 /* LoginView.swift */; };
+		420404AC2A9D31DF004DE201 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420404AB2A9D31DF004DE201 /* TestView.swift */; };
+		420404AF2A9D37E3004DE201 /* TextFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420404AE2A9D37E3004DE201 /* TextFieldValidation.swift */; };
+		423A2D632A9A9E2C00C23D04 /* GetStartedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A2D622A9A9E2C00C23D04 /* GetStartedButton.swift */; };
+		423A2D672A9B4E2D00C23D04 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A2D662A9B4E2D00C23D04 /* IntroView.swift */; };
+		423A2D6B2A9B5D5D00C23D04 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A2D6A2A9B5D5D00C23D04 /* Color.swift */; };
+		423A2D6E2A9B86BB00C23D04 /* SingUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A2D6D2A9B86BB00C23D04 /* SingUpView.swift */; };
+		423A2D722A9BCC0900C23D04 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A2D712A9BCC0900C23D04 /* BaseTextField.swift */; };
+		423A2D762A9BD2B800C23D04 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A2D752A9BD2B800C23D04 /* TextFieldModifier.swift */; };
+		423A2D782A9BD37300C23D04 /* BaseSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A2D772A9BD37300C23D04 /* BaseSecureTextField.swift */; };
 		424F45D82A99328800FA7376 /* FluxStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424F45D72A99328800FA7376 /* FluxStoreApp.swift */; };
-		424F45DA2A99328800FA7376 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424F45D92A99328800FA7376 /* ContentView.swift */; };
 		424F45DC2A99328900FA7376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 424F45DB2A99328900FA7376 /* Assets.xcassets */; };
 		424F45DF2A99328900FA7376 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 424F45DE2A99328900FA7376 /* Preview Assets.xcassets */; };
 		424F45E92A99328900FA7376 /* FluxStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424F45E82A99328900FA7376 /* FluxStoreTests.swift */; };
 		424F45F32A99328900FA7376 /* FluxStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424F45F22A99328900FA7376 /* FluxStoreUITests.swift */; };
 		424F45F52A99328900FA7376 /* FluxStoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424F45F42A99328900FA7376 /* FluxStoreUITestsLaunchTests.swift */; };
+		424F46092A993D3200FA7376 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 424F46082A993D3200FA7376 /* Images.xcassets */; };
+		424F460B2A993D4700FA7376 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 424F460A2A993D4700FA7376 /* Colors.xcassets */; };
+		424F460E2A993DC100FA7376 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424F460D2A993DC100FA7376 /* WelcomeView.swift */; };
+		424F46102A993E4000FA7376 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 424F460F2A993E4000FA7376 /* Icons.xcassets */; };
+		424F46142A9940A800FA7376 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424F46132A9940A800FA7376 /* Images.swift */; };
+		42C8A82F2A9E739400A36F81 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C8A82E2A9E739400A36F81 /* Banner.swift */; };
+		42C8A8312A9E864100A36F81 /* SocialIconWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C8A8302A9E864100A36F81 /* SocialIconWidget.swift */; };
+		42C8A8342A9E97CA00A36F81 /* ForgetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C8A8332A9E97CA00A36F81 /* ForgetPasswordView.swift */; };
+		42C8A8362A9F4ACA00A36F81 /* VerificationCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C8A8352A9F4ACA00A36F81 /* VerificationCodeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +55,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		420404A32A9D1FB2004DE201 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		420404A52A9D2284004DE201 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		420404A72A9D25AD004DE201 /* CenterModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterModifier.swift; sourceTree = "<group>"; };
+		420404A92A9D3010004DE201 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		420404AB2A9D31DF004DE201 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		420404AE2A9D37E3004DE201 /* TextFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidation.swift; sourceTree = "<group>"; };
+		423A2D622A9A9E2C00C23D04 /* GetStartedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedButton.swift; sourceTree = "<group>"; };
+		423A2D662A9B4E2D00C23D04 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		423A2D6A2A9B5D5D00C23D04 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		423A2D6D2A9B86BB00C23D04 /* SingUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpView.swift; sourceTree = "<group>"; };
+		423A2D712A9BCC0900C23D04 /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
+		423A2D752A9BD2B800C23D04 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
+		423A2D772A9BD37300C23D04 /* BaseSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSecureTextField.swift; sourceTree = "<group>"; };
 		424F45D42A99328800FA7376 /* FluxStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FluxStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		424F45D72A99328800FA7376 /* FluxStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluxStoreApp.swift; sourceTree = "<group>"; };
-		424F45D92A99328800FA7376 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		424F45DB2A99328900FA7376 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		424F45DE2A99328900FA7376 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		424F45E42A99328900FA7376 /* FluxStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FluxStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +77,15 @@
 		424F45EE2A99328900FA7376 /* FluxStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FluxStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		424F45F22A99328900FA7376 /* FluxStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluxStoreUITests.swift; sourceTree = "<group>"; };
 		424F45F42A99328900FA7376 /* FluxStoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluxStoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		424F46082A993D3200FA7376 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		424F460A2A993D4700FA7376 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		424F460D2A993DC100FA7376 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		424F460F2A993E4000FA7376 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		424F46132A9940A800FA7376 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		42C8A82E2A9E739400A36F81 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		42C8A8302A9E864100A36F81 /* SocialIconWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialIconWidget.swift; sourceTree = "<group>"; };
+		42C8A8332A9E97CA00A36F81 /* ForgetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordView.swift; sourceTree = "<group>"; };
+		42C8A8352A9F4ACA00A36F81 /* VerificationCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +113,92 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		420404AD2A9D37CC004DE201 /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				420404AE2A9D37E3004DE201 /* TextFieldValidation.swift */,
+			);
+			name = Validation;
+			sourceTree = "<group>";
+		};
+		423A2D602A9A9D9200C23D04 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				42C8A82D2A9E738600A36F81 /* Banner */,
+				423A2D612A9A9DA200C23D04 /* Button */,
+				42C8A8302A9E864100A36F81 /* SocialIconWidget.swift */,
+			);
+			name = Widget;
+			sourceTree = "<group>";
+		};
+		423A2D612A9A9DA200C23D04 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				423A2D622A9A9E2C00C23D04 /* GetStartedButton.swift */,
+				420404A32A9D1FB2004DE201 /* PrimaryButton.swift */,
+			);
+			name = Button;
+			sourceTree = "<group>";
+		};
+		423A2D652A9B4E1600C23D04 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				423A2D662A9B4E2D00C23D04 /* IntroView.swift */,
+			);
+			name = Intro;
+			sourceTree = "<group>";
+		};
+		423A2D682A9B5D4400C23D04 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				423A2D692A9B5D5100C23D04 /* Color */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		423A2D692A9B5D5100C23D04 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				423A2D6A2A9B5D5D00C23D04 /* Color.swift */,
+			);
+			name = Color;
+			sourceTree = "<group>";
+		};
+		423A2D6C2A9B869B00C23D04 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				423A2D6D2A9B86BB00C23D04 /* SingUpView.swift */,
+				420404A92A9D3010004DE201 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		423A2D702A9BCBE100C23D04 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				423A2D712A9BCC0900C23D04 /* BaseTextField.swift */,
+				423A2D772A9BD37300C23D04 /* BaseSecureTextField.swift */,
+			);
+			name = TextField;
+			sourceTree = "<group>";
+		};
+		423A2D732A9BD24D00C23D04 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				423A2D742A9BD27100C23D04 /* TextField */,
+				420404A72A9D25AD004DE201 /* CenterModifier.swift */,
+			);
+			name = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		423A2D742A9BD27100C23D04 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				423A2D752A9BD2B800C23D04 /* TextFieldModifier.swift */,
+			);
+			name = TextField;
+			sourceTree = "<group>";
+		};
 		424F45CB2A99328800FA7376 = {
 			isa = PBXGroup;
 			children = (
@@ -94,9 +222,11 @@
 		424F45D62A99328800FA7376 /* FluxStore */ = {
 			isa = PBXGroup;
 			children = (
+				424F46072A993CDD00FA7376 /* Feature */,
+				424F46062A993CC400FA7376 /* Product */,
+				424F46052A993CAD00FA7376 /* Utils */,
+				424F46042A993C9300FA7376 /* Resources */,
 				424F45D72A99328800FA7376 /* FluxStoreApp.swift */,
-				424F45D92A99328800FA7376 /* ContentView.swift */,
-				424F45DB2A99328900FA7376 /* Assets.xcassets */,
 				424F45DD2A99328900FA7376 /* Preview Content */,
 			);
 			path = FluxStore;
@@ -125,6 +255,83 @@
 				424F45F42A99328900FA7376 /* FluxStoreUITestsLaunchTests.swift */,
 			);
 			path = FluxStoreUITests;
+			sourceTree = "<group>";
+		};
+		424F46042A993C9300FA7376 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				424F45DB2A99328900FA7376 /* Assets.xcassets */,
+				424F46082A993D3200FA7376 /* Images.xcassets */,
+				424F460A2A993D4700FA7376 /* Colors.xcassets */,
+				424F460F2A993E4000FA7376 /* Icons.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		424F46052A993CAD00FA7376 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				420404AD2A9D37CC004DE201 /* Validation */,
+				420404AB2A9D31DF004DE201 /* TestView.swift */,
+				423A2D732A9BD24D00C23D04 /* ViewModifiers */,
+				423A2D682A9B5D4400C23D04 /* Extensions */,
+				424F46112A99408D00FA7376 /* Enums */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		424F46062A993CC400FA7376 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				423A2D702A9BCBE100C23D04 /* TextField */,
+				423A2D602A9A9D9200C23D04 /* Widget */,
+			);
+			name = Product;
+			sourceTree = "<group>";
+		};
+		424F46072A993CDD00FA7376 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				42C8A8322A9E97B700A36F81 /* ForgetPassword */,
+				423A2D6C2A9B869B00C23D04 /* Login */,
+				423A2D652A9B4E1600C23D04 /* Intro */,
+				424F460C2A993DA200FA7376 /* Welcome */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		424F460C2A993DA200FA7376 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				424F460D2A993DC100FA7376 /* WelcomeView.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		424F46112A99408D00FA7376 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				424F46132A9940A800FA7376 /* Images.swift */,
+				420404A52A9D2284004DE201 /* Icons.swift */,
+			);
+			name = Enums;
+			sourceTree = "<group>";
+		};
+		42C8A82D2A9E738600A36F81 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				42C8A82E2A9E739400A36F81 /* Banner.swift */,
+			);
+			name = Banner;
+			sourceTree = "<group>";
+		};
+		42C8A8322A9E97B700A36F81 /* ForgetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				42C8A8332A9E97CA00A36F81 /* ForgetPasswordView.swift */,
+				42C8A8352A9F4ACA00A36F81 /* VerificationCodeView.swift */,
+			);
+			path = ForgetPassword;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +438,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				424F46092A993D3200FA7376 /* Images.xcassets in Resources */,
+				424F460B2A993D4700FA7376 /* Colors.xcassets in Resources */,
 				424F45DF2A99328900FA7376 /* Preview Assets.xcassets in Resources */,
 				424F45DC2A99328900FA7376 /* Assets.xcassets in Resources */,
+				424F46102A993E4000FA7376 /* Icons.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +467,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				424F45DA2A99328800FA7376 /* ContentView.swift in Sources */,
+				420404A62A9D2284004DE201 /* Icons.swift in Sources */,
+				420404AF2A9D37E3004DE201 /* TextFieldValidation.swift in Sources */,
+				423A2D782A9BD37300C23D04 /* BaseSecureTextField.swift in Sources */,
+				420404AA2A9D3010004DE201 /* LoginView.swift in Sources */,
+				42C8A8312A9E864100A36F81 /* SocialIconWidget.swift in Sources */,
+				42C8A8342A9E97CA00A36F81 /* ForgetPasswordView.swift in Sources */,
+				420404AC2A9D31DF004DE201 /* TestView.swift in Sources */,
+				420404A82A9D25AE004DE201 /* CenterModifier.swift in Sources */,
+				423A2D6B2A9B5D5D00C23D04 /* Color.swift in Sources */,
+				424F46142A9940A800FA7376 /* Images.swift in Sources */,
+				423A2D722A9BCC0900C23D04 /* BaseTextField.swift in Sources */,
+				423A2D632A9A9E2C00C23D04 /* GetStartedButton.swift in Sources */,
+				420404A42A9D1FB2004DE201 /* PrimaryButton.swift in Sources */,
+				424F460E2A993DC100FA7376 /* WelcomeView.swift in Sources */,
+				42C8A8362A9F4ACA00A36F81 /* VerificationCodeView.swift in Sources */,
+				423A2D762A9BD2B800C23D04 /* TextFieldModifier.swift in Sources */,
 				424F45D82A99328800FA7376 /* FluxStoreApp.swift in Sources */,
+				42C8A82F2A9E739400A36F81 /* Banner.swift in Sources */,
+				423A2D6E2A9B86BB00C23D04 /* SingUpView.swift in Sources */,
+				423A2D672A9B4E2D00C23D04 /* IntroView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
