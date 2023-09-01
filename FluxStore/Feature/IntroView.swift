@@ -13,6 +13,7 @@ struct IntroView: View {
     
     var body: some View {
         NavigationStack {
+            
             GeometryReader { geometry in
                 ZStack (alignment: .bottom){
                     Rectangle().frame(height: geometry.size.height / 2).foregroundColor(.regtangleBg)
