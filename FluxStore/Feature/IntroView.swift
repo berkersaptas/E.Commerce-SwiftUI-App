@@ -13,7 +13,6 @@ struct IntroView: View {
     
     var body: some View {
         NavigationStack {
-            
             GeometryReader { geometry in
                 ZStack (alignment: .bottom){
                     Rectangle().frame(height: geometry.size.height / 2).foregroundColor(.regtangleBg)
@@ -38,7 +37,6 @@ struct IntroView: View {
                         GetStartedButton(text: "Shoping Now", onTap: {
                             showLoginView = true                        }).opacity((tabViewIndex == 2) ? 1 :0).padding(.bottom,80)
                     }
-                    //chevron.backward.circle.fill
                 }.navigationBarBackButtonHidden(true)
                     .edgesIgnoringSafeArea(.bottom)
                     .navigationDestination(isPresented: $showLoginView) {

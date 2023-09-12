@@ -17,26 +17,31 @@ struct LoginView: View {
     @State var email : String = ""
     @State var password : String = ""
     
+    @State var isVisiblePassword : Bool = false
+    
     var body: some View {
         NavigationStack {
             VStack {
                 Text("Log into\nYour Account").font(.title).frame(maxWidth: .infinity, alignment: .leading)
                 TextFormView { validate  in
-                    BaseTextField(hintText: "Email address", value:$email,contentType: .emailAddress,keyboardType: .emailAddress) {
-                        !(email.isEmpty)
-                    }
-                    BaseSecureTextField(hintText: "Password", value:$password,contentType: .newPassword) {
-                        !(password.isEmpty)
-                    }
-                    Text("Forget password").foregroundColor(.gray).frame(maxWidth: .infinity, alignment: .trailing).onTapGesture {
-                        forgetPasswordClicked = true
-                    }.padding(.vertical,20)
-                    PrimaryButton(text: "LOG IN", onTap: {
-                        if !validate() {
-                            return
+                    VStack {
+                        BaseTextField(hintText: "Email address", value:$email,contentType: .emailAddress,keyboardType: .emailAddress) {
+                            !(email.isEmpty)
                         }
-                        loginClicked = true
-                    }).padding()
+                        BaseSecureTextField(hintText: "Password", value:$password,contentType: .newPassword,isVisible: $isVisiblePassword) {
+                            !(password.isEmpty)
+                        }
+                        Text("Forget password").foregroundColor(.gray).frame(maxWidth: .infinity, alignment: .trailing).onTapGesture {
+                            forgetPasswordClicked = true
+                        }.padding(.vertical,20)
+                        PrimaryButton(text: "LOG IN", onTap: {
+                            if !validate() {
+                                return
+                            }
+                            loginClicked = true
+                        }).padding()
+                    }
+                    
                 }
                 Text("or log in with").foregroundColor(.gray).padding()
                 HStack(){

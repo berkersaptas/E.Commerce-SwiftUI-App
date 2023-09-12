@@ -30,10 +30,10 @@ struct ForgetPasswordView: View {
                         continueClicked = true
                     }).padding()
                 }
-                
-            }.padding().navigationDestination(isPresented: $continueClicked) {
-                VerificationCodeView()
-            }
+            }.modifier(BasicToolBar(destination: AnyView(LoginView())))
+                .padding().navigationDestination(isPresented: $continueClicked) {
+                    VerificationCodeView()
+                }
         }
     }
 }

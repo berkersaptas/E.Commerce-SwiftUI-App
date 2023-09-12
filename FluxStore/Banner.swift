@@ -74,7 +74,6 @@ struct BannerModifier: ViewModifier {
                             self.show = false
                         }
                     }
-                    // Auto dismiss after 5 seconds, and cancel the task if view disappear before the auto dismiss
                     DispatchQueue.main.asyncAfter(deadline: .now() + 5, execute: self.task!)
                 }
                 .onDisappear {

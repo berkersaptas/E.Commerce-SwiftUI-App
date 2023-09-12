@@ -14,19 +14,18 @@ struct GetStartedButton: View {
         Button(action: {
             onTap()
         }) {
-        Text(text)
+            Text(text)
                 .foregroundColor(.white)
                 .padding()
-            .background(
-                Rectangle()
-                   .cornerRadius(60)
-                   .foregroundColor(.gray)
-                   
-            )  .overlay(
-                RoundedRectangle(cornerRadius: 60)
-                    .stroke(.white, lineWidth: 2)
-            )
-       
+                .background(
+                    Rectangle()
+                        .cornerRadius(60)
+                        .foregroundColor(.gray)
+                    
+                )  .overlay(
+                    RoundedRectangle(cornerRadius: 60)
+                        .stroke(.white, lineWidth: 2)
+                )
         }
     }
 }

@@ -35,6 +35,8 @@
 		42C8A8312A9E864100A36F81 /* SocialIconWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C8A8302A9E864100A36F81 /* SocialIconWidget.swift */; };
 		42C8A8342A9E97CA00A36F81 /* ForgetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C8A8332A9E97CA00A36F81 /* ForgetPasswordView.swift */; };
 		42C8A8362A9F4ACA00A36F81 /* VerificationCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C8A8352A9F4ACA00A36F81 /* VerificationCodeView.swift */; };
+		42F2A4D42AAC8F4C00043EC7 /* BasicToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F2A4D32AAC8F4C00043EC7 /* BasicToolBar.swift */; };
+		42F2A4D62AACA0B700043EC7 /* CreateNewPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F2A4D52AACA0B700043EC7 /* CreateNewPasswordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		42C8A8302A9E864100A36F81 /* SocialIconWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialIconWidget.swift; sourceTree = "<group>"; };
 		42C8A8332A9E97CA00A36F81 /* ForgetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordView.swift; sourceTree = "<group>"; };
 		42C8A8352A9F4ACA00A36F81 /* VerificationCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeView.swift; sourceTree = "<group>"; };
+		42F2A4D32AAC8F4C00043EC7 /* BasicToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicToolBar.swift; sourceTree = "<group>"; };
+		42F2A4D52AACA0B700043EC7 /* CreateNewPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPasswordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,7 @@
 		423A2D732A9BD24D00C23D04 /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
+				42F2A4D22AAC8F3200043EC7 /* ToolBar */,
 				423A2D742A9BD27100C23D04 /* TextField */,
 				420404A72A9D25AD004DE201 /* CenterModifier.swift */,
 			);
@@ -223,7 +228,6 @@
 			isa = PBXGroup;
 			children = (
 				424F46072A993CDD00FA7376 /* Feature */,
-				424F46062A993CC400FA7376 /* Product */,
 				424F46052A993CAD00FA7376 /* Utils */,
 				424F46042A993C9300FA7376 /* Resources */,
 				424F45D72A99328800FA7376 /* FluxStoreApp.swift */,
@@ -287,11 +291,13 @@
 				423A2D602A9A9D9200C23D04 /* Widget */,
 			);
 			name = Product;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		424F46072A993CDD00FA7376 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				424F46062A993CC400FA7376 /* Product */,
 				42C8A8322A9E97B700A36F81 /* ForgetPassword */,
 				423A2D6C2A9B869B00C23D04 /* Login */,
 				423A2D652A9B4E1600C23D04 /* Intro */,
@@ -330,8 +336,17 @@
 			children = (
 				42C8A8332A9E97CA00A36F81 /* ForgetPasswordView.swift */,
 				42C8A8352A9F4ACA00A36F81 /* VerificationCodeView.swift */,
+				42F2A4D52AACA0B700043EC7 /* CreateNewPasswordView.swift */,
 			);
 			path = ForgetPassword;
+			sourceTree = "<group>";
+		};
+		42F2A4D22AAC8F3200043EC7 /* ToolBar */ = {
+			isa = PBXGroup;
+			children = (
+				42F2A4D32AAC8F4C00043EC7 /* BasicToolBar.swift */,
+			);
+			path = ToolBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,6 +483,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				420404A62A9D2284004DE201 /* Icons.swift in Sources */,
+				42F2A4D62AACA0B700043EC7 /* CreateNewPasswordView.swift in Sources */,
 				420404AF2A9D37E3004DE201 /* TextFieldValidation.swift in Sources */,
 				423A2D782A9BD37300C23D04 /* BaseSecureTextField.swift in Sources */,
 				420404AA2A9D3010004DE201 /* LoginView.swift in Sources */,
@@ -484,6 +500,7 @@
 				42C8A8362A9F4ACA00A36F81 /* VerificationCodeView.swift in Sources */,
 				423A2D762A9BD2B800C23D04 /* TextFieldModifier.swift in Sources */,
 				424F45D82A99328800FA7376 /* FluxStoreApp.swift in Sources */,
+				42F2A4D42AAC8F4C00043EC7 /* BasicToolBar.swift in Sources */,
 				42C8A82F2A9E739400A36F81 /* Banner.swift in Sources */,
 				423A2D6E2A9B86BB00C23D04 /* SingUpView.swift in Sources */,
 				423A2D672A9B4E2D00C23D04 /* IntroView.swift in Sources */,

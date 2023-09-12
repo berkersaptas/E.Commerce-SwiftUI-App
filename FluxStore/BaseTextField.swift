@@ -15,14 +15,20 @@ struct BaseTextField: View {
     var validateFlag : () -> Bool
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading, spacing: 2) {
+            Text(hintText)
+                .font(.caption)
+                .foregroundColor(Color(.placeholderText))
+                .opacity(value.wrappedValue.isEmpty ? 0 : 1)
+                .offset(y: value.wrappedValue.isEmpty ? 20 : 0)
             TextField(hintText, text: value).validate {
                 validateFlag()
-            }.textContentType(contentType).keyboardType(keyboardType)
+            }.autocapitalization(.none).textContentType(contentType).keyboardType(keyboardType)
             Divider()
                 .frame(height: 1)
                 .padding(.horizontal, 30)
-                .background(value.wrappedValue.isEmpty ? .black : validateFlag() ? .green : .red)
+                .background(.black)
         }.padding(.top,20)
     }
 }
+
