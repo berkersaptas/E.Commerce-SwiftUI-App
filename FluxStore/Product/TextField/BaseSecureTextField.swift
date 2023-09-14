@@ -12,7 +12,7 @@ struct BaseSecureTextField: View {
     var value : Binding<String>
     var contentType : UITextContentType?
     var isVisible : Binding<Bool>
-    var validateFlag : () -> Bool
+    var isValidate : Binding<Bool>
     
     var body: some View {
         ZStack {
@@ -24,18 +24,14 @@ struct BaseSecureTextField: View {
                     .offset(y: value.wrappedValue.isEmpty ? 20 : 0)
                 ZStack{
                     SecureField(hintText, text: value)
-                        .validate {
-                            validateFlag()
-                        }.autocapitalization(.none).textContentType(contentType).opacity(isVisible.wrappedValue ? 0 : 1)
+                        .autocapitalization(.none).textContentType(contentType).opacity(isVisible.wrappedValue ? 0 : 1)
                     TextField(hintText, text: value)
-                        .validate {
-                            validateFlag()
-                        }.autocapitalization(.none).textContentType(contentType).opacity(isVisible.wrappedValue ? 1: 0)
+                        .autocapitalization(.none).textContentType(contentType).opacity(isVisible.wrappedValue ? 1: 0)
                 }
                 Divider()
                     .frame(height: 1)
                     .padding(.horizontal, 30)
-                    .background(.black)
+                    .background(isValidate.wrappedValue ? .red : .black)
             }.padding(.top,20)
             Button(action: {
                 isVisible.wrappedValue.toggle()

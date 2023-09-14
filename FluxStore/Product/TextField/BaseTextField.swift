@@ -12,7 +12,7 @@ struct BaseTextField: View {
     var value : Binding<String>
     var contentType : UITextContentType?
     var keyboardType : UIKeyboardType
-    var validateFlag : () -> Bool
+    var isValidate : Binding<Bool>
     
     var body: some View {
         VStack(alignment: .leading, spacing: 2) {
@@ -21,13 +21,11 @@ struct BaseTextField: View {
                 .foregroundColor(Color(.placeholderText))
                 .opacity(value.wrappedValue.isEmpty ? 0 : 1)
                 .offset(y: value.wrappedValue.isEmpty ? 20 : 0)
-            TextField(hintText, text: value).validate {
-                validateFlag()
-            }.autocapitalization(.none).textContentType(contentType).keyboardType(keyboardType)
+            TextField(hintText, text: value).autocapitalization(.none).textContentType(contentType).keyboardType(keyboardType)
             Divider()
                 .frame(height: 1)
                 .padding(.horizontal, 30)
-                .background(.black)
+                .background(isValidate.wrappedValue ? .red : .black)
         }.padding(.top,20)
     }
 }

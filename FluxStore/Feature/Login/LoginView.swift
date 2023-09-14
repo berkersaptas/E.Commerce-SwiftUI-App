@@ -13,6 +13,8 @@ struct LoginView: View {
     @State var loginClicked : Bool = false
     @State var forgetPasswordClicked : Bool = false
     
+    @State var emailIsValidate : Bool = false
+    @State var passwordIsValidate : Bool = false
     
     @State var email : String = ""
     @State var password : String = ""
@@ -23,26 +25,26 @@ struct LoginView: View {
         NavigationStack {
             VStack {
                 Text("Log into\nYour Account").font(.title).frame(maxWidth: .infinity, alignment: .leading)
-                TextFormView { validate  in
-                    VStack {
-                        BaseTextField(hintText: "Email address", value:$email,contentType: .emailAddress,keyboardType: .emailAddress) {
-                            !(email.isEmpty)
-                        }
-                        BaseSecureTextField(hintText: "Password", value:$password,contentType: .newPassword,isVisible: $isVisiblePassword) {
-                            !(password.isEmpty)
-                        }
-                        Text("Forget password").foregroundColor(.gray).frame(maxWidth: .infinity, alignment: .trailing).onTapGesture {
-                            forgetPasswordClicked = true
-                        }.padding(.vertical,20)
-                        PrimaryButton(text: "LOG IN", onTap: {
-                            if !validate() {
-                                return
-                            }
-                            loginClicked = true
-                        }).padding()
+                BaseTextField(hintText: "Email address", value:$email,contentType: .emailAddress,keyboardType: .emailAddress,isValidate: $emailIsValidate)
+                BaseSecureTextField(hintText: "Password", value:$password,contentType: .newPassword,isVisible: $isVisiblePassword,isValidate: $passwordIsValidate)
+                Text("Forget password").foregroundColor(.gray).frame(maxWidth: .infinity, alignment: .trailing).onTapGesture {
+                    forgetPasswordClicked = true
+                }.padding(.vertical,20)
+                PrimaryButton(text: "LOG IN", onTap: {
+                    if(email.isEmpty){
+                        emailIsValidate = true
+                        return
+                    } else {
+                        emailIsValidate = false
                     }
-                    
-                }
+                    if(password.isEmpty) {
+                        passwordIsValidate = true
+                        return
+                    } else {
+                        passwordIsValidate = false
+                    }
+                    loginClicked = true
+                }).padding()
                 Text("or log in with").foregroundColor(.gray).padding()
                 HStack(){
                     SocialIconWidget(icon: Icons.apple.rawValue)
