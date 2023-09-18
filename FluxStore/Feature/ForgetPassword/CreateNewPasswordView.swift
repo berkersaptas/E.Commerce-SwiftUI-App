@@ -9,17 +9,21 @@ import SwiftUI
 
 struct CreateNewPasswordView: View {
     
-    @State var browseHomeClicked = false
+    var userEmail : String?
+    
+    @State private var browseHomeClicked = false
     @State private var openSheet: Bool = false
     
-    @State var password : String = ""
-    @State var confirmPassword : String = ""
+    @State private var password : String = ""
+    @State private var confirmPassword : String = ""
     
-    @State var isVisiblePassword : Bool = false
-    @State var isVisibleConfirmPassword : Bool = false
+    @State private var isVisiblePassword : Bool = false
+    @State private var isVisibleConfirmPassword : Bool = false
     
-    @State var passwordIsValidate : Bool = false
-    @State var confirmPasswordIsValidate : Bool = false
+    @State private var passwordIsValidate : Bool = false
+    @State private var confirmPasswordIsValidate : Bool = false
+    
+    @State private var toast: Toast? = nil
     
     var body: some View {
         NavigationStack {
@@ -34,34 +38,53 @@ struct CreateNewPasswordView: View {
                     PrimaryButton(text: "Confirm", onTap: {
                         if !(!password.isEmpty && password.count >= 6){
                             passwordIsValidate = true
+                            toast = Toast(type: .warning, title: "Warning", message: "Password field cannot be left blank and must contain at least six characters")
                             return
                         } else {
                             passwordIsValidate = false
                         }
                         if !(password == confirmPassword){
                             confirmPasswordIsValidate = true
+                            toast = Toast(type: .warning, title: "Warning", message: "Password and confirm password fields do not contain the same values")
                             return
                         } else {
                             confirmPasswordIsValidate = false
                         }
-                        openSheet = true
+                        if userEmail == nil {
+                            toast = Toast(type: .warning, title: "Warning", message: "Email Errpr")
+                            return
+                        }
+                        NetworkManager.shared.resetPassword(email:userEmail!, password: password ){ result in
+                            switch result {
+                            case .success(let resetPassword):
+                                if(resetPassword.data != nil && resetPassword.data?.data != nil ) {
+                                    openSheet = true
+                                }
+                            case .failure(let failer):
+                                toast = Toast(type: .error, title: "Error", message: failer.localizedDescription)
+                            }
+                        }
+                        //openSheet = true
                     })
                 }
                 .sheet(isPresented: $openSheet) {
-                        Image(Icons.success.rawValue)
-                        Text("Your password has been changed").bold().padding()
-                        Text("Welcome back! Discover now!").foregroundColor(.gray)
-                            .presentationDetents([.medium, .large])
-                            .presentationCornerRadius(40)
-                        PrimaryButton(text: "Browse home", onTap: {
-                            browseHomeClicked = true
-                        }).padding()
+                    Image(Icons.success.rawValue)
+                    Text("Your password has been changed").bold().padding()
+                    Text("Welcome back! Discover now!").foregroundColor(.gray)
+                        .presentationDetents([.medium, .large])
+                        .presentationCornerRadius(40)
+                    PrimaryButton(text: "Browse home", onTap: {
+                        browseHomeClicked = true
+                    }).padding()
                 }
             }
-            .padding().navigationDestination(isPresented: $browseHomeClicked) {
+            .adaptsToKeyboard()
+            .padding()
+            .navigationDestination(isPresented: $browseHomeClicked) {
                 LoginView()
-            }.modifier(BasicToolBar(destination: AnyView(ForgetPasswordView())))
-            
+            }
+            .modifier(BasicToolBar(destination: AnyView(ForgetPasswordView())))
+            .toastView(toast: $toast)
         }
     }
 }

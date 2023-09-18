@@ -9,17 +9,19 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @State var signUpClicked : Bool = false
-    @State var loginClicked : Bool = false
-    @State var forgetPasswordClicked : Bool = false
+    @State private var signUpClicked : Bool = false
+    @State private var loginClicked : Bool = false
+    @State private var forgetPasswordClicked : Bool = false
     
-    @State var emailIsValidate : Bool = false
-    @State var passwordIsValidate : Bool = false
+    @State private var emailIsValidate : Bool = false
+    @State private var passwordIsValidate : Bool = false
     
-    @State var email : String = ""
-    @State var password : String = ""
+    @State private var email : String = ""
+    @State private var password : String = ""
     
-    @State var isVisiblePassword : Bool = false
+    @State private var isVisiblePassword : Bool = false
+    
+    @State private var toast: Toast? = nil
     
     var body: some View {
         NavigationStack {
@@ -33,18 +35,37 @@ struct LoginView: View {
                 PrimaryButton(text: "LOG IN", onTap: {
                     if(email.isEmpty){
                         emailIsValidate = true
+                        toast = Toast(type: .warning, title: "Warning", message: "Email field cannot be left blank")
                         return
                     } else {
                         emailIsValidate = false
                     }
                     if(password.isEmpty) {
                         passwordIsValidate = true
+                        toast = Toast(type: .warning, title: "Warning", message: "Password field cannot be left blank")
                         return
                     } else {
                         passwordIsValidate = false
                     }
-                    loginClicked = true
-                }).padding()
+                    NetworkManager.shared.login(email:email, password: password ){ result in
+                        switch result {
+                        case .success(let login):
+                            if(login.data != nil && login.data?.data != nil ) {
+                                var setKeyChainMail :Bool =  KeyChainStorage.setData(.setUserName(userName: email))()
+                                var setKeyChainPassword :Bool =  KeyChainStorage.setData(.setPassword(password: password))()
+                                if(setKeyChainMail && setKeyChainPassword) {
+                                    loginClicked = true
+                                }
+                                else {
+                                    toast = Toast(type: .warning, title: "Warning", message: "An error occurred while registering")
+                                }
+                            }
+                        case .failure(let failer):
+                            toast = Toast(type: .error, title: "Error", message: failer.localizedDescription)
+                        }
+                    }
+                })
+                .padding()
                 Text("or log in with").foregroundColor(.gray).padding()
                 HStack(){
                     SocialIconWidget(icon: Icons.apple.rawValue)
@@ -56,16 +77,19 @@ struct LoginView: View {
                     signUpClicked = true
                     return .discarded
                 }))
-            }.padding().navigationBarBackButtonHidden(true)
+            }.adaptsToKeyboard()
+                .padding().navigationBarBackButtonHidden(true)
                 .navigationDestination(isPresented: $forgetPasswordClicked) {
                     ForgetPasswordView()
-                }.navigationDestination(isPresented: $loginClicked) {
+                }
+                .navigationDestination(isPresented: $loginClicked) {
                     //TODO : Home Page Navigation
-                    TestView()
+                    HomePage()
                 }
                 .navigationDestination(isPresented: $signUpClicked) {
                     SignUpView()
                 }
+                .toastView(toast: $toast)
         }
     }
 }

@@ -13,18 +13,21 @@ import Foundation
 
 struct VerificationCodeView: View {
     
-    @State var continueClicked : Bool = false
+    var userEmail : String?
+    
+    @State private var continueClicked : Bool = false
     @FocusState private var pinFocusState : FocusPin?
     
-    @State var pinOne: String = ""
-    @State var pinTwo: String = ""
-    @State var pinThree: String = ""
-    @State var pinFour: String = ""
+    @State private var pinOne: String = ""
+    @State private var pinTwo: String = ""
+    @State private var pinThree: String = ""
+    @State private var pinFour: String = ""
     
-    @State var timeRemaining = 59
-    @State var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    @State var timerIsFinish : Bool = false
+    @State private var timeRemaining = 59
+    @State private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State private var timerIsFinish : Bool = false
     
+    @State private var toast: Toast? = nil
     
     var body: some View {
         NavigationStack {
@@ -35,7 +38,6 @@ struct VerificationCodeView: View {
                 HStack(spacing:15, content: {
                     TextField("", text: $pinOne)
                         .modifier(OtpModifer(pin:$pinOne))
-                    
                         .onChange(of:pinOne){newVal in
                             if (newVal.count == 1) {
                                 pinFocusState = .pinTwo
@@ -83,19 +85,24 @@ struct VerificationCodeView: View {
                     } label: {
                         Text("Resend verification code")
                     }.frame(maxWidth: .infinity, alignment: .leading).padding()
-                    
                 }
-                
                 Spacer()
                 PrimaryButton(text: "Continue", onTap: {
+                    if pinOne.isEmpty || pinTwo.isEmpty || pinThree.isEmpty || pinFour.isEmpty {
+                        toast = Toast(type: .warning, title: "Warning", message: "Code field cannot be left blank and must contain")
+                        return
+                    }
                     timer.upstream.connect().cancel()
                     continueClicked = true
                 })
-            }.padding()
-                .navigationDestination(isPresented: $continueClicked) {
-                    CreateNewPasswordView()
-                }
-                .modifier(BasicToolBar(destination: AnyView(ForgetPasswordView())))
+            }
+            .adaptsToKeyboard()
+            .padding()
+            .navigationDestination(isPresented: $continueClicked) {
+                CreateNewPasswordView(userEmail: userEmail)
+            }
+            .modifier(BasicToolBar(destination: AnyView(ForgetPasswordView())))
+            .toastView(toast: $toast)
         }
     }
 }

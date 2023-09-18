@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct IntroView: View {
+    
+    @StateObject var appStorageManager = AppStorageManager()
+    
     @State private var showLoginView : Bool = false
     @State private var tabViewIndex : Int = 0
     
@@ -35,6 +38,7 @@ struct IntroView: View {
                             }.tag(2)
                         }.tabViewStyle(.page)
                         GetStartedButton(text: "Shoping Now", onTap: {
+                            appStorageManager.saveAppStorage(storageKey: .introIsSeen, value: true)
                             showLoginView = true                        }).opacity((tabViewIndex == 2) ? 1 :0).padding(.bottom,80)
                     }
                 }.navigationBarBackButtonHidden(true)
