@@ -33,26 +33,26 @@ struct LoginView: View {
                     forgetPasswordClicked = true
                 }.padding(.vertical,20)
                 PrimaryButton(text: "LOG IN", onTap: {
-                    if(email.isEmpty){
+                    if TextFieldValidation.email(email: email).validation(){
                         emailIsValidate = true
-                        toast = Toast(type: .warning, title: "Warning", message: "Email field cannot be left blank")
+                        toast = TextFieldValidation.message(type: .email)
                         return
                     } else {
                         emailIsValidate = false
                     }
-                    if(password.isEmpty) {
+                    if TextFieldValidation.password(password: password).validation(){
+                        toast = TextFieldValidation.message(type: .password)
                         passwordIsValidate = true
-                        toast = Toast(type: .warning, title: "Warning", message: "Password field cannot be left blank")
                         return
                     } else {
                         passwordIsValidate = false
                     }
-                    NetworkManager.shared.login(email:email, password: password ){ result in
+                    NetworkManager.shared.login(email:email, password: password){ result in
                         switch result {
                         case .success(let login):
                             if(login.data != nil && login.data?.data != nil ) {
-                                var setKeyChainMail :Bool =  KeyChainStorage.setData(.setUserName(userName: email))()
-                                var setKeyChainPassword :Bool =  KeyChainStorage.setData(.setPassword(password: password))()
+                                let setKeyChainMail :Bool =  KeyChainStorage.setData(.setUserName(userName: email))()
+                                let setKeyChainPassword :Bool =  KeyChainStorage.setData(.setPassword(password: password))()
                                 if(setKeyChainMail && setKeyChainPassword) {
                                     loginClicked = true
                                 }

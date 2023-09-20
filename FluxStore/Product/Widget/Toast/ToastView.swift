@@ -22,9 +22,10 @@ struct ToastView: View {
                 VStack(alignment: .leading) {
                     Text(title)
                         .font(.system(size: 14, weight: .semibold))
+                        .foregroundColor(.black)
                     Text(message)
                         .font(.system(size: 12))
-                        .foregroundColor(Color.black.opacity(0.6))
+                        .foregroundColor(.black.opacity(0.6))
                 }
                 Spacer(minLength: 10)
                 Button {

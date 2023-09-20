@@ -25,9 +25,9 @@ struct ForgetPasswordView: View {
                 BaseTextField(hintText: "Enter your email here", value:$email,contentType: .emailAddress,keyboardType: .emailAddress,isValidate: $emailIsValidate)
                 Spacer()
                 PrimaryButton(text: "Continue", onTap: {
-                    if(email.isEmpty){
+                    if TextFieldValidation.email(email: email).validation(){
                         emailIsValidate = true
-                        toast = Toast(type: .warning, title: "Warning", message: "Email field cannot be left blank")
+                        toast = TextFieldValidation.message(type: .email)
                         return
                     } else {
                         emailIsValidate = false

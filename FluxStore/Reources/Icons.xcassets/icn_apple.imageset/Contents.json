@@ -3,6 +3,16 @@
     {
       "filename" : "icn_apple.pdf",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "icn_apple 1.pdf",
+      "idiom" : "universal"
     }
   ],
   "info" : {

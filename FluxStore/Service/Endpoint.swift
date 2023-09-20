@@ -21,15 +21,12 @@ enum HTTPMethod: String {
     case post = "POST"
 }
 
-
-
 enum Endpoint {
     case setUser(name: String, email: String, password: String)
     case login(email: String, password: String)
     case forgetPassword(email: String)
     case resetPassword(email: String, password: String)
 }
-
 
 extension Endpoint: EndpointProtocol {
     
@@ -61,26 +58,25 @@ extension Endpoint: EndpointProtocol {
     }
     
     var parameters: [String : Any]? {
-
+        
         if case .setUser(let name, let email, let password) = self {
             return ["name": name, "email": email, "password": password]
         }
-
+        
         if case .login(let email, let password) = self {
             return ["email": email, "password": password]
         }
-
+        
         if case .forgetPassword(let email) = self {
             return ["email": email]
         }
-
+        
         if case .resetPassword(let email, let password) = self {
             return ["email": email,"password": password]
         }
-
+        
         return nil
     }
-    
     
     func request() -> URLRequest {
         guard var components = URLComponents(string: baseURL) else {
@@ -99,7 +95,8 @@ extension Endpoint: EndpointProtocol {
             do {
                 let data = try JSONSerialization.data(withJSONObject: parameters)
                 request.httpBody = data
-            }catch {
+            }
+            catch {
                 print(error.localizedDescription)
             }
         }

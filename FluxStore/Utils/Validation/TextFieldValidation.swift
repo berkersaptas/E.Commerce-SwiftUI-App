@@ -2,57 +2,52 @@
 //  TextFieldValidation.swift
 //  FluxStore
 //
-//  Created by Berker Saptas on 28.08.2023.
+//  Created by Berker Saptas on 19.09.2023.
 //
 
-import SwiftUI
+import Foundation
 
-struct ValidationPreferenceKey : PreferenceKey {
-    static var defaultValue: [Bool] = []
-    static func reduce(value: inout [Bool], nextValue: () -> [Bool]) {
-        value += nextValue()
-    }
+
+protocol TextFieldValidationProtocol {
+    func validation() -> Bool
 }
 
-struct ValidationModifier : ViewModifier  {
-    let validation : () -> Bool
-    func body(content: Content) -> some View {
-        content
-            .preference(
-                key: ValidationPreferenceKey.self,
-                value: [validation()]
-            )
-    }
+enum TextFieldValidation {
+    case name (name : String)
+    case email (email : String)
+    case password (password : String)
+    case confirmPassword (password : String, confirmPassword : String)
 }
 
-extension TextField   {
-    func validate(_ flag : @escaping ()-> Bool) -> some View {
-        self
-            .modifier(ValidationModifier(validation: flag))
-    }
+enum TextFieldValidationType {
+    case name
+    case email
+    case password
+    case confirmPassword
 }
 
-extension SecureField   {
-    func validate(_ flag : @escaping ()-> Bool) -> some View {
-        self
-            .modifier(ValidationModifier(validation: flag))
-    }
-}
 
-struct TextFormView<Content : View> : View {
-    @State var validationSeeds : [Bool] = []
-    @ViewBuilder var content : (( @escaping () -> Bool)) -> Content
-    var body: some View {
-        content(validate)
-            .onPreferenceChange(ValidationPreferenceKey.self) { value in
-                validationSeeds = value
-            }
+extension TextFieldValidation : TextFieldValidationProtocol {
+    
+   static func message(type : TextFieldValidationType ) -> Toast {
+        switch type{
+        case .name : return Toast(type: .warning, title: "Warning", message: "Name field cannot be left blank and must contain at least two characters")
+        case .email: return Toast(type: .warning, title: "Warning", message: "Email field cannot be left blank and must contain at least two characters")
+        case .password:  return Toast(type: .warning, title: "Warning", message: "Password field cannot be left blank and must contain at least six characters")
+        case .confirmPassword:  return Toast (type: .warning, title: "Warning", message: "Password and confirm password fields do not contain the same values")
+        }
     }
     
-    private func validate() -> Bool {
-        for seed in validationSeeds {
-            if !seed { return false}
+    func validation() -> Bool {
+        switch self {
+        case .name(let name):
+            return !(!name.isEmpty && name.count >= 2)
+        case .email(let email):
+            return !(!email.isEmpty && email.count >= 2)
+        case .password(let password):
+            return !(!password.isEmpty && password.count >= 6)
+        case .confirmPassword(let password, let confirmPassword):
+            return !(confirmPassword == password)
         }
-        return true
     }
 }

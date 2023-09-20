@@ -38,42 +38,38 @@ struct SignUpView: View {
                 BaseSecureTextField(hintText: "Password", value:$password,contentType: .newPassword,isVisible: $isVisiblePassword,isValidate: $passwordIsValidate)
                 BaseSecureTextField(hintText: "Confirm password", value:$confirmPassword,contentType: .password,isVisible: $isVisibleConfirmPassword,isValidate: $confirmPasswordIsValidate)
                 PrimaryButton(text: "SIGN UP", onTap: {
-                    if !(!name.isEmpty && name.count >= 2){
+                    if TextFieldValidation.name(name: name).validation() {
                         nameIsValidate = true
-                        toast = Toast(type: .warning, title: "Warning", message: "Name field cannot be left blank and must contain at least two characters")
+                        toast = TextFieldValidation.message(type: .name)
                         return
                     } else {
                         nameIsValidate = false
                     }
-                    if !(!email.isEmpty && name.count >= 2){
+                    if TextFieldValidation.email(email: email).validation(){
                         emailIsValidate = true
-                        toast = Toast(type: .warning, title: "Warning", message: "Email field cannot be left blank and must contain at least two characters")
+                        toast = TextFieldValidation.message(type: .email)
                         return
                     } else {
                         emailIsValidate = false
                     }
-                    if !(!password.isEmpty && password.count >= 6){
-                        toast = Toast(type: .warning, title: "Warning", message: "Password field cannot be left blank and must contain at least six characters")
+                    if TextFieldValidation.password(password: password).validation(){
+                        toast = TextFieldValidation.message(type: .password)
                         passwordIsValidate = true
                         return
                     } else {
                         passwordIsValidate = false
                     }
-                    if !(confirmPassword == password){
+                    if TextFieldValidation.confirmPassword(password: password, confirmPassword: confirmPassword).validation(){
                         confirmPasswordIsValidate = true
-                        toast = Toast(type: .warning, title: "Warning", message: "Password and confirm password fields do not contain the same values")
+                        toast = TextFieldValidation.message(type: .confirmPassword)
                         return
                     } else {
                         confirmPasswordIsValidate = false
                     }
-                    //Request Service Create Account
                     NetworkManager.shared.setUser(name: name, email:email, password: password ){ result in
                         switch result {
                         case .success(let setUser):
                             if(setUser.data != nil && setUser.data?.data != nil ) {
-                                /*
-                                 toast = Toast(type: .success, title: "Success", message: "Successfully registered")
-                                 */
                                 signUpClicked = true
                             }
                         case .failure(let failer):
@@ -96,10 +92,11 @@ struct SignUpView: View {
             }
             .adaptsToKeyboard()
             .padding()
-           .navigationBarBackButtonHidden(true)  .navigationDestination(isPresented: $signUpClicked) {
+            .navigationBarBackButtonHidden(true)
+            .navigationDestination(isPresented: $loginClicked) {
                 LoginView()
             }
-            .navigationDestination(isPresented: $loginClicked) {
+            .navigationDestination(isPresented: $signUpClicked) {
                 LoginView()
             }
             .toastView(toast: $toast)

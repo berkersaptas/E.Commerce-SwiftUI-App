@@ -24,8 +24,7 @@ struct BaseTextField: View {
             TextField(hintText, text: value).autocapitalization(.none).textContentType(contentType).keyboardType(keyboardType)
             Divider()
                 .frame(height: 1)
-                .padding(.horizontal, 30)
-                .background(isValidate.wrappedValue ? .red : .black)
+                .background(isValidate.wrappedValue ? .red : ThemeManager().isDarkMode() ? .white :  .black)
         }.padding(.top,20)
     }
 }

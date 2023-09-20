@@ -36,22 +36,22 @@ struct CreateNewPasswordView: View {
                     BaseSecureTextField(hintText: "Confirm password", value:$confirmPassword,contentType: .password,isVisible: $isVisibleConfirmPassword,isValidate: $confirmPasswordIsValidate)
                     Spacer()
                     PrimaryButton(text: "Confirm", onTap: {
-                        if !(!password.isEmpty && password.count >= 6){
+                        if TextFieldValidation.password(password: password).validation(){
+                            toast = TextFieldValidation.message(type: .password)
                             passwordIsValidate = true
-                            toast = Toast(type: .warning, title: "Warning", message: "Password field cannot be left blank and must contain at least six characters")
                             return
                         } else {
                             passwordIsValidate = false
                         }
-                        if !(password == confirmPassword){
+                        if TextFieldValidation.confirmPassword(password: password, confirmPassword: confirmPassword).validation(){
                             confirmPasswordIsValidate = true
-                            toast = Toast(type: .warning, title: "Warning", message: "Password and confirm password fields do not contain the same values")
+                            toast = TextFieldValidation.message(type: .confirmPassword)
                             return
                         } else {
                             confirmPasswordIsValidate = false
                         }
                         if userEmail == nil {
-                            toast = Toast(type: .warning, title: "Warning", message: "Email Errpr")
+                            toast = Toast(type: .warning, title: "Warning", message: "Email Error")
                             return
                         }
                         NetworkManager.shared.resetPassword(email:userEmail!, password: password ){ result in
@@ -64,13 +64,16 @@ struct CreateNewPasswordView: View {
                                 toast = Toast(type: .error, title: "Error", message: failer.localizedDescription)
                             }
                         }
-                        //openSheet = true
+                        openSheet = true
                     })
                 }
                 .sheet(isPresented: $openSheet) {
-                    Image(Icons.success.rawValue)
+                    ZStack {
+                        Circle().foregroundColor(.white).frame(width: 80)
+                        Image(Icons.success.rawValue)
+                    }
                     Text("Your password has been changed").bold().padding()
-                    Text("Welcome back! Discover now!").foregroundColor(.gray)
+                    Text("Welcome back! Discover now!")
                         .presentationDetents([.medium, .large])
                         .presentationCornerRadius(40)
                     PrimaryButton(text: "Browse home", onTap: {

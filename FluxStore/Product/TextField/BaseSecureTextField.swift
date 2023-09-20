@@ -13,7 +13,7 @@ struct BaseSecureTextField: View {
     var contentType : UITextContentType?
     var isVisible : Binding<Bool>
     var isValidate : Binding<Bool>
-    
+        
     var body: some View {
         ZStack {
             VStack(alignment: .leading, spacing: 2) {
@@ -30,13 +30,12 @@ struct BaseSecureTextField: View {
                 }
                 Divider()
                     .frame(height: 1)
-                    .padding(.horizontal, 30)
-                    .background(isValidate.wrappedValue ? .red : .black)
+                    .background(isValidate.wrappedValue ? .red : ThemeManager().isDarkMode() ? .white :  .black)
             }.padding(.top,20)
             Button(action: {
                 isVisible.wrappedValue.toggle()
             }) {
-                Image(systemName: isVisible.wrappedValue ? "eye.slash.fill" : "eye.fill").foregroundColor(.black)
+                Image(systemName: isVisible.wrappedValue ? "eye.slash.fill" : "eye.fill").foregroundColor(ThemeManager().isDarkMode() ? .gray : .black)
             }.frame(maxWidth: .infinity, alignment: .trailing)
         }
     }
