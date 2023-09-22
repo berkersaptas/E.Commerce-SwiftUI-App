@@ -73,7 +73,11 @@ struct SignUpView: View {
                                 signUpClicked = true
                             }
                         case .failure(let failer):
-                            toast = Toast(type: .error, title: "Error", message: failer.localizedDescription)
+                            if failer.errorModel != nil {
+                            toast = Toast(type: .error, title: "Error", message: failer.errorModel!.message!)
+                            } else {
+                                toast = Toast(type: .error, title: "Error", message:failer.status)
+                            }
                         }
                     }
                 }).padding(.all)

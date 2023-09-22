@@ -53,6 +53,7 @@
 		42C8A8362A9F4ACA00A36F81 /* VerificationCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C8A8352A9F4ACA00A36F81 /* VerificationCodeView.swift */; };
 		42F221342ABA34B40056F620 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F221332ABA34B40056F620 /* ThemeManager.swift */; };
 		42F221362ABA3EF80056F620 /* TextFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F221352ABA3EF80056F620 /* TextFieldValidation.swift */; };
+		42F221392ABCE8330056F620 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F221382ABCE8330056F620 /* ErrorModel.swift */; };
 		42F2A4D62AACA0B700043EC7 /* CreateNewPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F2A4D52AACA0B700043EC7 /* CreateNewPasswordView.swift */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +124,7 @@
 		42C8A8352A9F4ACA00A36F81 /* VerificationCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeView.swift; sourceTree = "<group>"; };
 		42F221332ABA34B40056F620 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		42F221352ABA3EF80056F620 /* TextFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidation.swift; sourceTree = "<group>"; };
+		42F221382ABCE8330056F620 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		42F2A4D52AACA0B700043EC7 /* CreateNewPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPasswordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -293,6 +295,7 @@
 		426278562AB5D9F6002689B7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				42F221372ABCE7F70056F620 /* Error */,
 				426278572AB5DBE3002689B7 /* User */,
 			);
 			path = Model;
@@ -487,6 +490,14 @@
 			path = Theme;
 			sourceTree = "<group>";
 		};
+		42F221372ABCE7F70056F620 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				42F221382ABCE8330056F620 /* ErrorModel.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -654,6 +665,7 @@
 				424F460E2A993DC100FA7376 /* WelcomeView.swift in Sources */,
 				42C8A8362A9F4ACA00A36F81 /* VerificationCodeView.swift in Sources */,
 				4262785F2AB61685002689B7 /* ToastView.swift in Sources */,
+				42F221392ABCE8330056F620 /* ErrorModel.swift in Sources */,
 				423A2D762A9BD2B800C23D04 /* TextFieldModifier.swift in Sources */,
 				424F45D82A99328800FA7376 /* FluxStoreApp.swift in Sources */,
 				426278612AB616C8002689B7 /* ToastStyle.swift in Sources */,
