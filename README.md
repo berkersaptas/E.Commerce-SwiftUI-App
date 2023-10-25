@@ -16,27 +16,27 @@ SwiftUI project
 # Images
 
 <p float="left">
-  <img src="https://github.com/berkersaptas/FluxStore-E.Commerce-SwiftUI-App/assets/28731627/2e8a56ae-db36-4a7c-8c5a-957121b34570" width="280"/>
+  <img src="https://github.com/berkersaptas/FluxStore-E.Commerce-SwiftUI-App/assets/28731627/1922567e-2fb5-4a8a-8e3d-6bc5f3154e4b" width="280"/>
   &nbsp; &nbsp;
-  <img src="https://github.com/berkersaptas/FluxStore-E.Commerce-SwiftUI-App/assets/28731627/017a79e0-93b8-4658-a4c3-3274f01d61b1" width="280"/>
+  <img src="https://github.com/berkersaptas/FluxStore-E.Commerce-SwiftUI-App/assets/28731627/3d36e553-ce1d-4a1c-8890-ead1ae1988f8" width="280"/>
   &nbsp; &nbsp;
-  <img src="https://github.com/berkersaptas/FluxStore-E.Commerce-SwiftUI-App/assets/28731627/96fa54c1-319c-4447-b92f-80331ff75fa0" width="280"/>
+  <img src="https://github.com/berkersaptas/FluxStore-E.Commerce-SwiftUI-App/assets/28731627/43d464b8-5d42-4061-88ea-7d530452ae11" width="280"/>
   &nbsp; &nbsp; 
-  <img src="https://github.com/berkersaptas/FluxStore-E.Commerce-SwiftUI-App/assets/28731627/f4a4521f-43a0-4fef-b01c-5ad907a66ec0" width="280"/>
+  <img src="https://github.com/berkersaptas/FluxStore-E.Commerce-SwiftUI-App/assets/28731627/6c7ab1fd-8182-48e3-9f02-0c7754e85bbf" width="280"/>
   &nbsp; &nbsp;
-  <img src="https://github.com/berkersaptas/FluxStore-E.Commerce-SwiftUI-App/assets/28731627/1526c500-c24d-4a0f-b458-d6893af56203" width="280"/>
+  <img src="https://github.com/berkersaptas/FluxStore-E.Commerce-SwiftUI-App/assets/28731627/25d4edb9-5ca3-4ba5-b4b9-fb82e301aba2" width="280"/>
   &nbsp; &nbsp;
-  <img src="https://github.com/berkersaptas/FluxStore-E.Commerce-SwiftUI-App/assets/28731627/e3d12ffb-abbc-4d89-bdf5-3e7b74d8b9ef" width="280"/>
+  <img src="https://github.com/berkersaptas/FluxStore-E.Commerce-SwiftUI-App/assets/28731627/45aadad8-2cba-41f4-b528-6354070b5650" width="280"/>
   &nbsp; &nbsp;
-  <img src="https://github.com/berkersaptas/FluxStore-E.Commerce-SwiftUI-App/assets/28731627/f895b270-a109-4474-bb91-ca083998e0aa" width="280"/>
+  <img src="https://github.com/berkersaptas/FluxStore-E.Commerce-SwiftUI-App/assets/28731627/7a598376-af2e-4e8f-9a61-c4997f822dec" width="280"/>
   &nbsp; &nbsp;
-  <img src="https://github.com/berkersaptas/FluxStore-E.Commerce-SwiftUI-App/assets/28731627/335593aa-2322-4f1f-83d1-66a7ee8180be" width="280"/>
+  <img src="https://github.com/berkersaptas/FluxStore-E.Commerce-SwiftUI-App/assets/28731627/0aec4b9b-cb9f-49bb-af14-0ff5f3be3369" width="280"/>
   &nbsp; &nbsp;
-  <img src="https://github.com/berkersaptas/FluxStore-E.Commerce-SwiftUI-App/assets/28731627/95f0fd05-c966-4821-9b5f-4a1dd1ad9df7" width="280"/>
+  <img src="https://github.com/berkersaptas/FluxStore-E.Commerce-SwiftUI-App/assets/28731627/3f4c6378-1de7-4cfc-9ac7-6362e6e8d6c1" width="280"/>
   &nbsp; &nbsp;
-  <img src="https://github.com/berkersaptas/FluxStore-E.Commerce-SwiftUI-App/assets/28731627/ef095dc0-89e0-494b-a64f-bc40dd128d27" width="280"/>
+  <img src="https://github.com/berkersaptas/FluxStore-E.Commerce-SwiftUI-App/assets/28731627/b3b839fd-402a-4096-aa48-c7b841df7b39" width="280"/>
   &nbsp; &nbsp;
-  <img src="https://github.com/berkersaptas/FluxStore-E.Commerce-SwiftUI-App/assets/28731627/74682d90-9180-4ea7-aa62-a7f014c333e8" width="280"/>
+  <img src="https://github.com/berkersaptas/FluxStore-E.Commerce-SwiftUI-App/assets/28731627/d6ae1200-3d27-46e9-a257-8ce1b35987eb" width="280"/>
   &nbsp; &nbsp;
 </p>
 
