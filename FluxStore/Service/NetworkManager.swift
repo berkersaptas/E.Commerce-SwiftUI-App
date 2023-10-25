@@ -76,19 +76,4 @@ class NetworkManager {
         let endpoint = Endpoint.resetPassword(email: email, password: password)
         request(endpoint, completion: completion)
     }
-    
-    /*
-     // Tum endpintler buradan kontrol ediyoruz.
-     func getUser(completion: @escaping (Result<[User], Error>) -> Void) {
-     let endpoint = Endpoint.getUsers
-     request(endpoint, completion: completion)
-     }
-     
-     func getComments(postID: String, completion: @escaping (Result<CommentArray, Error>) -> Void) {
-     let endpoint = Endpoint.comments(postID: postID)
-     request(endpoint, completion: completion)
-     }
-     
-     
-     */
 }

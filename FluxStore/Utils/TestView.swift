@@ -9,7 +9,13 @@ import SwiftUI
 
 struct TestView: View {
     var body: some View {
-        Text("Test View!")
+        HStack {
+            Image(Icons.hamburgerMenu.rawValue)
+            Spacer()
+            Text("GemStore").font(.headline)
+            Spacer()
+            Image(systemName: "bell")
+        }.padding()
     }
 }
 

@@ -9,5 +9,5 @@ import SwiftUI
 
 extension Color {
     public static var regtangleBg : Color { Color("clr_regtangle_bg")}
-
+    public static var clrBg : Color { Color("clr_bg")}
 }

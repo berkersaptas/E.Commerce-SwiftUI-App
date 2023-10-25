@@ -15,13 +15,11 @@ enum StorageKeys: String {
 class AppStorageManager: ObservableObject {
     
     @AppStorage(StorageKeys.introIsSeen.rawValue) var intro : Bool = false
-    // Diğer @AppStorage özelliklerini burada tanımlanacak
     
     func saveAppStorage(storageKey: StorageKeys, value: Bool) {
         switch storageKey {
         case .introIsSeen:
             intro = value
-            // Diğer anahtarlar için gerekli işlemleri burada yapabilirsiniz
         }
     }
     
@@ -29,7 +27,6 @@ class AppStorageManager: ObservableObject {
         switch storageKey {
         case .introIsSeen:
             return intro
-            // Diğer anahtarlar için gerekli işlemleri burada yapabilirsiniz
         }
     }
 }

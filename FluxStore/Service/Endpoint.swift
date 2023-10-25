@@ -85,7 +85,7 @@ extension Endpoint: EndpointProtocol {
         
         //Add Path
         components.path = path
-        
+
         //Create request
         var request = URLRequest(url: components.url!)
         request.httpMethod = method.rawValue

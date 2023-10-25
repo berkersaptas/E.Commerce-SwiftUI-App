@@ -13,6 +13,7 @@
 		420404AA2A9D3010004DE201 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420404A92A9D3010004DE201 /* LoginView.swift */; };
 		420404AC2A9D31DF004DE201 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420404AB2A9D31DF004DE201 /* TestView.swift */; };
 		420404AF2A9D37E3004DE201 /* TextFieldAutoValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420404AE2A9D37E3004DE201 /* TextFieldAutoValidation.swift */; };
+		4210015B2AC0B4D000856B05 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4210015A2AC0B4CF00856B05 /* HomePageView.swift */; };
 		423A2D632A9A9E2C00C23D04 /* GetStartedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A2D622A9A9E2C00C23D04 /* GetStartedButton.swift */; };
 		423A2D672A9B4E2D00C23D04 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A2D662A9B4E2D00C23D04 /* IntroView.swift */; };
 		423A2D6B2A9B5D5D00C23D04 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A2D6A2A9B5D5D00C23D04 /* Color.swift */; };
@@ -23,7 +24,7 @@
 		424AD6682AB741890020AC42 /* ForgetPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424AD6672AB741890020AC42 /* ForgetPasswordModel.swift */; };
 		424AD66A2AB78B8D0020AC42 /* SetUserPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424AD6692AB78B8D0020AC42 /* SetUserPasswordModel.swift */; };
 		424AD66C2AB797740020AC42 /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424AD66B2AB797740020AC42 /* KeyChainManager.swift */; };
-		424AD66F2AB8E55A0020AC42 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424AD66E2AB8E55A0020AC42 /* HomePage.swift */; };
+		424AD66F2AB8E55A0020AC42 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424AD66E2AB8E55A0020AC42 /* MainPageView.swift */; };
 		424F45D82A99328800FA7376 /* FluxStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424F45D72A99328800FA7376 /* FluxStoreApp.swift */; };
 		424F45DC2A99328900FA7376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 424F45DB2A99328900FA7376 /* Assets.xcassets */; };
 		424F45DF2A99328900FA7376 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 424F45DE2A99328900FA7376 /* Preview Assets.xcassets */; };
@@ -81,6 +82,7 @@
 		420404A92A9D3010004DE201 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		420404AB2A9D31DF004DE201 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		420404AE2A9D37E3004DE201 /* TextFieldAutoValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAutoValidation.swift; sourceTree = "<group>"; };
+		4210015A2AC0B4CF00856B05 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		423A2D622A9A9E2C00C23D04 /* GetStartedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedButton.swift; sourceTree = "<group>"; };
 		423A2D662A9B4E2D00C23D04 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		423A2D6A2A9B5D5D00C23D04 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -91,7 +93,7 @@
 		424AD6672AB741890020AC42 /* ForgetPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordModel.swift; sourceTree = "<group>"; };
 		424AD6692AB78B8D0020AC42 /* SetUserPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUserPasswordModel.swift; sourceTree = "<group>"; };
 		424AD66B2AB797740020AC42 /* KeyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
-		424AD66E2AB8E55A0020AC42 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		424AD66E2AB8E55A0020AC42 /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
 		424F45D42A99328800FA7376 /* FluxStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FluxStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		424F45D72A99328800FA7376 /* FluxStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluxStoreApp.swift; sourceTree = "<group>"; };
 		424F45DB2A99328900FA7376 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -153,6 +155,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		421001592AC0B4C200856B05 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				4210015A2AC0B4CF00856B05 /* HomePageView.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
 		423A2D6C2A9B869B00C23D04 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,12 +187,12 @@
 			path = AdaptsToKeyboard;
 			sourceTree = "<group>";
 		};
-		424AD66D2AB8E53F0020AC42 /* HomePage */ = {
+		424AD66D2AB8E53F0020AC42 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
-				424AD66E2AB8E55A0020AC42 /* HomePage.swift */,
+				424AD66E2AB8E55A0020AC42 /* MainPageView.swift */,
 			);
-			path = HomePage;
+			path = MainPage;
 			sourceTree = "<group>";
 		};
 		424F45CB2A99328800FA7376 = {
@@ -247,7 +257,8 @@
 		424F46072A993CDD00FA7376 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				424AD66D2AB8E53F0020AC42 /* HomePage */,
+				421001592AC0B4C200856B05 /* HomePage */,
+				424AD66D2AB8E53F0020AC42 /* MainPage */,
 				427216682AB3849400F09075 /* SignUp */,
 				4272165B2AB3816800F09075 /* Intro */,
 				42C8A8322A9E97B700A36F81 /* ForgetPassword */,
@@ -641,6 +652,7 @@
 				42F2A4D62AACA0B700043EC7 /* CreateNewPasswordView.swift in Sources */,
 				420404AF2A9D37E3004DE201 /* TextFieldAutoValidation.swift in Sources */,
 				420404AA2A9D3010004DE201 /* LoginView.swift in Sources */,
+				4210015B2AC0B4D000856B05 /* HomePageView.swift in Sources */,
 				42C8A8312A9E864100A36F81 /* SocialIconWidget.swift in Sources */,
 				426278662AB61734002689B7 /* ToastModifier.swift in Sources */,
 				42C8A8342A9E97CA00A36F81 /* ForgetPasswordView.swift in Sources */,
@@ -655,7 +667,7 @@
 				42F221362ABA3EF80056F620 /* TextFieldValidation.swift in Sources */,
 				4262786A2AB619EC002689B7 /* Toast+View+Extension.swift in Sources */,
 				4262786D2AB634D7002689B7 /* AppStorageManager.swift in Sources */,
-				424AD66F2AB8E55A0020AC42 /* HomePage.swift in Sources */,
+				424AD66F2AB8E55A0020AC42 /* MainPageView.swift in Sources */,
 				424F46142A9940A800FA7376 /* Images.swift in Sources */,
 				423A2D632A9A9E2C00C23D04 /* GetStartedButton.swift in Sources */,
 				420404A42A9D1FB2004DE201 /* PrimaryButton.swift in Sources */,

@@ -66,7 +66,7 @@ struct WelcomeView: View {
                     SignUpView()
                 }
                 .navigationDestination(isPresented: $showHomePageView) {
-                    HomePage()
+                    MainPageView()
                 }
                 .navigationDestination(isPresented: $showLoginPageView) {
                     LoginView()

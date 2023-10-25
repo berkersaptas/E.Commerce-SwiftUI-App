@@ -13,4 +13,5 @@ enum Icons : String {
     case facebook  = "icn_facebook"
     case backButton  = "icn_backbutton"
     case success  = "icn_success"
+    case hamburgerMenu  = "icn_hamburgerMenu"
 }

@@ -31,78 +31,81 @@ struct VerificationCodeView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                Text("Verification code").font(.title).frame(maxWidth: .infinity, alignment: .leading)
-                Text("Please enter the verification code we sent to your email address").font(.subheadline).frame(maxWidth: .infinity, alignment: .leading).padding(.vertical)
-                Spacer()
-                HStack(spacing:15, content: {
-                    TextField("", text: $pinOne)
-                        .modifier(OtpModifer(pin:$pinOne))
-                        .onChange(of:pinOne){newVal in
-                            if (newVal.count == 1) {
-                                pinFocusState = .pinTwo
+            ZStack {
+                Color.clrBg.ignoresSafeArea()
+                VStack {
+                    Text("Verification code").font(.title).frame(maxWidth: .infinity, alignment: .leading)
+                    Text("Please enter the verification code we sent to your email address").font(.subheadline).frame(maxWidth: .infinity, alignment: .leading).padding(.vertical)
+                    Spacer()
+                    HStack(spacing:15, content: {
+                        TextField("", text: $pinOne)
+                            .modifier(OtpModifer(pin:$pinOne))
+                            .onChange(of:pinOne){newVal in
+                                if (newVal.count == 1) {
+                                    pinFocusState = .pinTwo
+                                }
                             }
-                        }
-                        .focused($pinFocusState, equals: .pinOne)
-                    TextField("", text:  $pinTwo)
-                        .modifier(OtpModifer(pin:$pinTwo))
-                        .onChange(of:pinTwo){newVal in
-                            if (newVal.count == 1) {
-                                pinFocusState = .pinThree
+                            .focused($pinFocusState, equals: .pinOne)
+                        TextField("", text:  $pinTwo)
+                            .modifier(OtpModifer(pin:$pinTwo))
+                            .onChange(of:pinTwo){newVal in
+                                if (newVal.count == 1) {
+                                    pinFocusState = .pinThree
+                                }
                             }
-                        }
-                        .focused($pinFocusState, equals: .pinTwo)
-                    TextField("", text:$pinThree)
-                        .modifier(OtpModifer(pin:$pinThree))
-                        .onChange(of:pinThree){newVal in
-                            if (newVal.count == 1) {
-                                pinFocusState = .pinFour
+                            .focused($pinFocusState, equals: .pinTwo)
+                        TextField("", text:$pinThree)
+                            .modifier(OtpModifer(pin:$pinThree))
+                            .onChange(of:pinThree){newVal in
+                                if (newVal.count == 1) {
+                                    pinFocusState = .pinFour
+                                }
                             }
-                        }
-                        .focused($pinFocusState, equals: .pinThree)
-                    TextField("", text:$pinFour)
-                        .modifier(OtpModifer(pin:$pinFour))
-                        .focused($pinFocusState, equals: .pinFour)
-                })
-                .padding(.vertical)
-                if !timerIsFinish {
-                    Text("Resend in 00:\(String(format: "%02d", timeRemaining))")
-                        .opacity(0.5).frame(maxWidth: .infinity, alignment: .leading)
-                        .onReceive(timer) { _ in
-                            if timeRemaining > 0 {
-                                timeRemaining -= 1
-                            } else {
-                                timerIsFinish = true
-                                timer.upstream.connect().cancel()
+                            .focused($pinFocusState, equals: .pinThree)
+                        TextField("", text:$pinFour)
+                            .modifier(OtpModifer(pin:$pinFour))
+                            .focused($pinFocusState, equals: .pinFour)
+                    })
+                    .padding(.vertical)
+                    if !timerIsFinish {
+                        Text("Resend in 00:\(String(format: "%02d", timeRemaining))")
+                            .opacity(0.5).frame(maxWidth: .infinity, alignment: .leading)
+                            .onReceive(timer) { _ in
+                                if timeRemaining > 0 {
+                                    timeRemaining -= 1
+                                } else {
+                                    timerIsFinish = true
+                                    timer.upstream.connect().cancel()
+                                }
                             }
-                        }
-                        .padding()
-                } else {
-                    Button {
-                        timeRemaining = 59
-                        timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-                        timerIsFinish = false
-                    } label: {
-                        Text("Resend verification code")
-                    }.frame(maxWidth: .infinity, alignment: .leading).padding()
-                }
-                Spacer()
-                PrimaryButton(text: "Continue", onTap: {
-                    if pinOne.isEmpty || pinTwo.isEmpty || pinThree.isEmpty || pinFour.isEmpty {
-                        toast = Toast(type: .warning, title: "Warning", message: "Code field cannot be left blank and must contain")
-                        return
+                            .padding()
+                    } else {
+                        Button {
+                            timeRemaining = 59
+                            timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+                            timerIsFinish = false
+                        } label: {
+                            Text("Resend verification code")
+                        }.frame(maxWidth: .infinity, alignment: .leading).padding()
                     }
-                    timer.upstream.connect().cancel()
-                    continueClicked = true
-                })
-            }
-            .adaptsToKeyboard()
-            .padding()
-            .navigationDestination(isPresented: $continueClicked) {
-                CreateNewPasswordView(userEmail: userEmail)
-            }
-            .modifier(BasicToolBar(destination: AnyView(ForgetPasswordView())))
+                    Spacer()
+                    PrimaryButton(text: "Continue", onTap: {
+                        if pinOne.isEmpty || pinTwo.isEmpty || pinThree.isEmpty || pinFour.isEmpty {
+                            toast = Toast(type: .warning, title: "Warning", message: "Code field cannot be left blank and must contain")
+                            return
+                        }
+                        timer.upstream.connect().cancel()
+                        continueClicked = true
+                    })
+                }
+                .adaptsToKeyboard()
+                .padding()
+                .navigationDestination(isPresented: $continueClicked) {
+                    CreateNewPasswordView(userEmail: userEmail)
+                }
+                .modifier(BasicToolBar(destination: AnyView(ForgetPasswordView())))
             .toastView(toast: $toast)
+            }
         }
     }
 }
