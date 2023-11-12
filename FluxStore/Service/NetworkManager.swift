@@ -33,7 +33,7 @@ class NetworkManager {
             }
             
             guard let response = response as? HTTPURLResponse , response.statusCode >= 200 , response.statusCode <= 299 else {
-        
+                
                 do{
                     let decodedData = try JSONDecoder().decode(ErrorModel.self, from: data)
                     completion(.failure(ErrorResponse(status: "Invalid Response", errorModel: decodedData)))
@@ -74,6 +74,22 @@ class NetworkManager {
     
     func resetPassword(email: String, password: String, completion: @escaping (Result<LoginModel, ErrorResponse>) -> Void) {
         let endpoint = Endpoint.resetPassword(email: email, password: password)
+        request(endpoint, completion: completion)
+    }
+    func getCategories(completion: @escaping (Result<[String], ErrorResponse>) -> Void) {
+        let endpoint = Endpoint.getCategories
+        request(endpoint, completion: completion)
+    }
+    func getCategory(categoryName: String, completion: @escaping (Result<[ProductItemModel], ErrorResponse>) -> Void) {
+        let endpoint = Endpoint.getCategory(categoryName: categoryName)
+        request(endpoint, completion: completion)
+    }
+    func getProducts(completion: @escaping (Result<[ProductItemModel], ErrorResponse>) -> Void) {
+        let endpoint = Endpoint.getProducts
+        request(endpoint, completion: completion)
+    }
+    func getProduct(productId: String, completion: @escaping (Result<ProductItemModel, ErrorResponse>) -> Void) {
+        let endpoint = Endpoint.getProduct(productId: productId)
         request(endpoint, completion: completion)
     }
 }

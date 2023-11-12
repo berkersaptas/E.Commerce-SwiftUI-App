@@ -26,12 +26,34 @@ enum Endpoint {
     case login(email: String, password: String)
     case forgetPassword(email: String)
     case resetPassword(email: String, password: String)
+    case getCategories
+    case getCategory(categoryName : String)
+    case getProducts
+    case getProduct(productId : String)
 }
 
 extension Endpoint: EndpointProtocol {
     
     var baseURL: String {
-        return "http://127.0.0.1:6000"
+        switch self {
+        case .setUser:
+            return "http://127.0.0.1:6000"
+        case .login :
+            return "http://127.0.0.1:6000"
+        case .forgetPassword:
+            return "http://127.0.0.1:6000"
+        case .resetPassword:
+            return "http://127.0.0.1:6000"
+        case .getCategories:
+            return "https://fakestoreapi.com"
+        case .getCategory:
+            return "https://fakestoreapi.com"
+        case .getProducts:
+            return "https://fakestoreapi.com"
+        case .getProduct:
+            return "https://fakestoreapi.com"
+        }
+        
     }
     
     var path: String {
@@ -40,6 +62,11 @@ extension Endpoint: EndpointProtocol {
         case .login : return "/login"
         case .forgetPassword : return "/forgetPassword"
         case .resetPassword : return "/resetPassword"
+        case .getCategories : return "/products/categories"
+        case .getCategory(categoryName: let categoryName) : return "products/category/\(categoryName)"
+        case .getProducts : return "/products"
+        case .getProduct(productId: let productId) : return "products/\(productId)"
+            
         }
     }
     
@@ -49,6 +76,10 @@ extension Endpoint: EndpointProtocol {
         case .login: return .post
         case .forgetPassword: return .post
         case .resetPassword: return .post
+        case .getCategories: return .get
+        case .getCategory: return .get
+        case .getProducts: return .get
+        case .getProduct: return .get
         }
     }
     
@@ -74,7 +105,6 @@ extension Endpoint: EndpointProtocol {
         if case .resetPassword(let email, let password) = self {
             return ["email": email,"password": password]
         }
-        
         return nil
     }
     
@@ -85,7 +115,7 @@ extension Endpoint: EndpointProtocol {
         
         //Add Path
         components.path = path
-
+        
         //Create request
         var request = URLRequest(url: components.url!)
         request.httpMethod = method.rawValue
