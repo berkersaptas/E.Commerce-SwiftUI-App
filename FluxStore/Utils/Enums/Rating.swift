@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+import Foundation
+
+
+enum RatingImage : String {
+    case emptyStar = "star"
+    case halfStar  = "star.leadinghalf.filled"
+    case fillStar  = "star.fill"
+}

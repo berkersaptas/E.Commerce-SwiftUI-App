@@ -63,7 +63,7 @@ extension Endpoint: EndpointProtocol {
         case .forgetPassword : return "/forgetPassword"
         case .resetPassword : return "/resetPassword"
         case .getCategories : return "/products/categories"
-        case .getCategory(categoryName: let categoryName) : return "products/category/\(categoryName)"
+        case .getCategory(categoryName: let categoryName) : return "/products/category/\(categoryName)"
         case .getProducts : return "/products"
         case .getProduct(productId: let productId) : return "products/\(productId)"
             

@@ -56,6 +56,9 @@
 		42C8A8312A9E864100A36F81 /* SocialIconWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C8A8302A9E864100A36F81 /* SocialIconWidget.swift */; };
 		42C8A8342A9E97CA00A36F81 /* ForgetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C8A8332A9E97CA00A36F81 /* ForgetPasswordView.swift */; };
 		42C8A8362A9F4ACA00A36F81 /* VerificationCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C8A8352A9F4ACA00A36F81 /* VerificationCodeView.swift */; };
+		42CB2F3E2B00E9E000826C77 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CB2F3D2B00E9E000826C77 /* ProductView.swift */; };
+		42CB2F412B00F4BB00826C77 /* RatingWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CB2F402B00F4BB00826C77 /* RatingWidget.swift */; };
+		42CB2F432B00F4E100826C77 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CB2F422B00F4E100826C77 /* Rating.swift */; };
 		42F221342ABA34B40056F620 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F221332ABA34B40056F620 /* ThemeManager.swift */; };
 		42F221362ABA3EF80056F620 /* TextFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F221352ABA3EF80056F620 /* TextFieldValidation.swift */; };
 		42F221392ABCE8330056F620 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F221382ABCE8330056F620 /* ErrorModel.swift */; };
@@ -132,6 +135,9 @@
 		42C8A8302A9E864100A36F81 /* SocialIconWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialIconWidget.swift; sourceTree = "<group>"; };
 		42C8A8332A9E97CA00A36F81 /* ForgetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordView.swift; sourceTree = "<group>"; };
 		42C8A8352A9F4ACA00A36F81 /* VerificationCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeView.swift; sourceTree = "<group>"; };
+		42CB2F3D2B00E9E000826C77 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		42CB2F402B00F4BB00826C77 /* RatingWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingWidget.swift; sourceTree = "<group>"; };
+		42CB2F422B00F4E100826C77 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		42F221332ABA34B40056F620 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		42F221352ABA3EF80056F620 /* TextFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidation.swift; sourceTree = "<group>"; };
 		42F221382ABCE8330056F620 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
@@ -267,6 +273,7 @@
 		424F46072A993CDD00FA7376 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				42CB2F3B2B00E99B00826C77 /* Product */,
 				421001592AC0B4C200856B05 /* HomePage */,
 				424AD66D2AB8E53F0020AC42 /* MainPage */,
 				427216682AB3849400F09075 /* SignUp */,
@@ -412,6 +419,7 @@
 		427216602AB3828D00F09075 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				42CB2F3F2B00F47A00826C77 /* Rating */,
 				42F221322ABA34990056F620 /* Theme */,
 				424AD6622AB723AF0020AC42 /* AdaptsToKeyboard */,
 				4262784B2AB4A37C002689B7 /* Storage */,
@@ -456,6 +464,7 @@
 			children = (
 				424F46132A9940A800FA7376 /* Images.swift */,
 				420404A52A9D2284004DE201 /* Icons.swift */,
+				42CB2F422B00F4E100826C77 /* Rating.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -543,6 +552,30 @@
 				42F2A4D52AACA0B700043EC7 /* CreateNewPasswordView.swift */,
 			);
 			path = ForgetPassword;
+			sourceTree = "<group>";
+		};
+		42CB2F3B2B00E99B00826C77 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				42CB2F3C2B00E9CC00826C77 /* View */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		42CB2F3C2B00E9CC00826C77 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				42CB2F3D2B00E9E000826C77 /* ProductView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		42CB2F3F2B00F47A00826C77 /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				42CB2F402B00F4BB00826C77 /* RatingWidget.swift */,
+			);
+			path = Rating;
 			sourceTree = "<group>";
 		};
 		42F221322ABA34990056F620 /* Theme */ = {
@@ -710,6 +743,7 @@
 				426278662AB61734002689B7 /* ToastModifier.swift in Sources */,
 				42C8A8342A9E97CA00A36F81 /* ForgetPasswordView.swift in Sources */,
 				420404AC2A9D31DF004DE201 /* TestView.swift in Sources */,
+				42CB2F432B00F4E100826C77 /* Rating.swift in Sources */,
 				426278642AB616EB002689B7 /* Toast.swift in Sources */,
 				424AD6642AB723C80020AC42 /* AdaptsToKeyboard.swift in Sources */,
 				420404A82A9D25AE004DE201 /* CenterModifier.swift in Sources */,
@@ -717,6 +751,7 @@
 				424AD66A2AB78B8D0020AC42 /* SetUserPasswordModel.swift in Sources */,
 				42F221342ABA34B40056F620 /* ThemeManager.swift in Sources */,
 				4272165E2AB3821A00F09075 /* BaseTextField.swift in Sources */,
+				42CB2F412B00F4BB00826C77 /* RatingWidget.swift in Sources */,
 				42F221362ABA3EF80056F620 /* TextFieldValidation.swift in Sources */,
 				4262786A2AB619EC002689B7 /* Toast+View+Extension.swift in Sources */,
 				4262786D2AB634D7002689B7 /* AppStorageManager.swift in Sources */,
@@ -732,6 +767,7 @@
 				4262785F2AB61685002689B7 /* ToastView.swift in Sources */,
 				42929B9E2B0023B800B62F8D /* HomePageViewModel.swift in Sources */,
 				42F221392ABCE8330056F620 /* ErrorModel.swift in Sources */,
+				42CB2F3E2B00E9E000826C77 /* ProductView.swift in Sources */,
 				423A2D762A9BD2B800C23D04 /* TextFieldModifier.swift in Sources */,
 				424F45D82A99328800FA7376 /* FluxStoreApp.swift in Sources */,
 				42929B9A2AFFEDF900B62F8D /* CategoryWidget.swift in Sources */,

@@ -14,37 +14,41 @@ struct HomePageView: View {
     @State var selectedCategory : String?
     
     var body: some View {
-        ZStack {
-            Color.clrBg.ignoresSafeArea()
-            ScrollView {
-                VStack(spacing: 20) {
-                    DefaultToolBar()
-                    ScrollView(.horizontal,showsIndicators: false) {
-                        HStack(spacing: 20) {
-                            ForEach(viewModel.categories,id: \.self) { category in
-                                CategoryWidget(categoryName: category, isSelected: selectedCategory == category) {
-                                    //category select - ignore selected value repeat
-                                    if(selectedCategory != category){
-                                        selectedCategory = category
-                                    } else {
-                                        selectedCategory = nil
+        GeometryReader { geo in
+            ZStack {
+                Color.clrBg2.ignoresSafeArea()
+                ScrollView {
+                    VStack(spacing: 20) {
+                        DefaultToolBar()
+                        ScrollView(.horizontal,showsIndicators: false) {
+                            HStack(spacing: 20) {
+                                ForEach(viewModel.categories,id: \.self) { category in
+                                    CategoryWidget(categoryName: category, isSelected: selectedCategory == category) {
+                                        //category select - ignore selected value repeat
+                                        if(selectedCategory != category){
+                                             viewModel.fetchCategoryProduct(categoryName: category)
+                                            selectedCategory = category
+                                        } else {
+                                            selectedCategory = nil
+                                            viewModel.fetchProductsData()
+                                        }
                                     }
                                 }
                             }.padding(.vertical,4)
                         }
-                    }
-                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))], spacing: 20) {
-                        ForEach(viewModel.products,id: \.id) { product in
-                            Text(product.title)
+                        LazyVGrid(columns: [GridItem(.adaptive(minimum: geo.size.width / 3))], spacing: 20) {
+                            ForEach(viewModel.products,id: \.id) { product in
+                                ProductView(product: product)
+                            }
                         }
                     }
-                }
+                }.padding()
             }
-        }.padding()
             .onAppear {
                 viewModel.fetchCategoriesData()
                 viewModel.fetchProductsData()
             }
+        }
     }
 }
 
